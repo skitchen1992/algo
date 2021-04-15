@@ -29,6 +29,4 @@ function iqTest(numbers){
     return point;
     
 }
-console.log(iqTest("1 3 4 5 7"));
-
-//
+console.log(iqTest("2 4 7 8 10"));
