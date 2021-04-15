@@ -46,3 +46,23 @@ function getCount(str) {
     return vowelsCount;
   }
   console.log(getCount("Nikita"));
+
+  // Бинарный поиск. В функцию передается список чисел и загаданное число.
+function binarySearch(list,item){
+    let low = 0,                //В переменных low и high хранятся границы той части списка,в которой выполняется поиск
+        high = list.length - 1;
+    while(low <= high) {        //Пока эта часть не сократится до одного элемента
+        let mid = Math.floor((low + high) / 2),//...проверяем средний элемент
+            guess = list[mid];
+        if(guess == item){      //Значение найдено
+            return mid;
+        }else if(guess > item){ //Много
+            high = mid - 1;
+        }else{                  //Мало
+            low = mid + 1;
+        }   
+        
+    }   
+}
+let myList = [1,3,5,7,9];
+console.log(binarySearch(myList,3));
