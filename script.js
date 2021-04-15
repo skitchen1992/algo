@@ -30,3 +30,5 @@ function iqTest(numbers){
     
 }
 console.log(iqTest("1 3 4 5 7"));
+
+//
